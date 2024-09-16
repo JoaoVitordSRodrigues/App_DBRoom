@@ -1,4 +1,4 @@
-package com.example.myapplication.roomDB
+package com.example.myapp.roomDB
 
 import androidx.room.Dao
 import androidx.room.Delete
@@ -7,7 +7,8 @@ import androidx.room.Upsert
 import kotlinx.coroutines.flow.Flow
 
 @Dao
-interface PessoaDao {
+interface PessoaDao{
+
     @Upsert
     suspend fun upsertPessoa(pessoa: Pessoa)
 
@@ -16,4 +17,5 @@ interface PessoaDao {
 
     @Query("SELECT * FROM Pessoa")
     fun getAllPessoa(): Flow<List<Pessoa>>
+
 }

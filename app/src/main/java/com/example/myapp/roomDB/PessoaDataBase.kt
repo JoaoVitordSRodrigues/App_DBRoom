@@ -1,4 +1,4 @@
-package com.example.myapplication.roomDB
+package com.example.myapp.roomDB
 
 import androidx.room.Database
 import androidx.room.RoomDatabase
@@ -8,6 +8,7 @@ import androidx.room.RoomDatabase
     version = 1
 )
 
-abstract class PessoaDatabase: RoomDatabase(){
-    abstract fun pessoaDao() : PessoaDao
+abstract class PessoaDataBase: RoomDatabase() {
+    abstract fun pessoaDao(): PessoaDao
 }
+
